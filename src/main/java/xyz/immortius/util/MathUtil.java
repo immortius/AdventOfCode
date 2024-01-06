@@ -1,10 +1,10 @@
 package xyz.immortius.util;
 
 import com.google.common.math.BigIntegerMath;
+import com.google.common.math.LongMath;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.math.RoundingMode;
+import java.util.*;
 
 public final class MathUtil {
     private MathUtil() {
@@ -15,6 +15,18 @@ public final class MathUtil {
         List<Double> result = new ArrayList<>();
         result.add((-b - variant) / (2 * a));
         result.add((-b + variant) / (2 * a));
+        return result;
+    }
+
+    public static Set<Long> factorize(long value) {
+        Set<Long> result = new LinkedHashSet<>();
+        long s = LongMath.sqrt(value, RoundingMode.FLOOR);
+        for (long i = 1; i < s; i++) {
+            if (value % i == 0) {
+                result.add(i);
+                result.add(value / i);
+            }
+        }
         return result;
     }
 

@@ -4,11 +4,13 @@ import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ListMultimap;
 import com.google.common.io.CharStreams;
 import org.jetbrains.annotations.NotNull;
+import xyz.immortius.util.AStar;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Day19 {
 
@@ -48,12 +50,10 @@ public class Day19 {
         for (Map.Entry<String, String> conversion : conversions.entries()) {
             int index = input.indexOf(conversion.getKey());
             while (index != -1) {
-                StringBuilder builder = new StringBuilder();
-                builder.append(input, 0, index);
-                builder.append(conversion.getValue());
-                builder.append(input, index + conversion.getKey().length(), input.length());
-                //System.out.println(input + ": " + conversion.getKey() + " => " + conversion.getValue() + " = " + builder);
-                outputs.add(builder.toString());
+                String result = input.substring(0, index) +
+                        conversion.getValue() +
+                        input.substring(index + conversion.getKey().length());
+                outputs.add(result);
                 if (index + 1 < input.length()) {
                     index = input.indexOf(conversion.getKey(), index + 1);
                 } else {
@@ -62,16 +62,6 @@ public class Day19 {
             }
         }
         return outputs;
-    }
-
-    private int occurrences(String input, String target) {
-        int index = input.indexOf(target);
-        int result = 0;
-        while (index != -1) {
-            result++;
-            index = input.indexOf(target, index + 1);
-        }
-        return result;
     }
 
     private ListMultimap<String, String> parse(List<String> lines) {
@@ -89,50 +79,24 @@ public class Day19 {
             reversed.put(entry.getValue(), entry.getKey());
         }
 
-        int steps = build(input, reversed, "e", Integer.MAX_VALUE,  1);
-
-        //int steps = build("e", conversions, input);
+        int steps = build(input, reversed, "e");
         System.out.println("Part 2: " + steps);
     }
 
-    private int build(String input, ListMultimap<String, String> conversions, String target, int minSteps, int depth) {
-//        int step = 0;
-//        Set<String> visited = new LinkedHashSet<>();
-//        visited.add(input);
-//        Set<String> options = Collections.singleton(input);
-//        while (!options.contains(target)) {
-//            step++;
-//            Set<String> nextSet = new LinkedHashSet<>();
-//            for (String option : options) {
-//                nextSet.addAll(getConversionOptions(conversions, option));
-//            }
-//
-//            options = nextSet.stream().filter(x -> !visited.contains(x))
-//                    .collect(Collectors.toSet());
-//            visited.addAll(options);
-//            System.out.println("Step " + step + " - " + options.size());
-//        }
-//        return step;
-
-        if (minSteps == 1) {
-            return minSteps;
+    private Integer build(String input, ListMultimap<String, String> conversions, String target) {
+        if (target.equals(input)) {
+            return 0;
         }
-        List<String> options = getConversionOptions(conversions, input).stream()
-                .sorted(Comparator.comparingInt(String::length)).toList();
-        if (options.isEmpty()) {
-            return minSteps;
-        }
-        if (options.contains(target)) {
-            return 1;
-        }
-        for (String option : options) {
-            int result = build(option, conversions, target, minSteps - 1, depth + 1);
-            if (result + 1 < minSteps) {
-                System.out.println("Reducing min steps to " + (result + depth) + " (" + depth + ")");
-                minSteps = result + 1;
+        Integer result = null;
+        for (String option : getConversionOptions(conversions, input).stream().sorted(Comparator.comparingInt(String::length)).toList()) {
+            Integer steps = build(option, conversions, target);
+            if (steps != null) {
+                // We can assume that the path that shrinks the string the most is the shortest path
+                result = steps + 1;
+                break;
             }
         }
-        return minSteps;
+        return result;
     }
 
 }

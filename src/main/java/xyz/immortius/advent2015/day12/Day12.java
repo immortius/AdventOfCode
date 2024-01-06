@@ -16,6 +16,7 @@ public class Day12 {
     private static final String YEAR = "2015";
     private static final String DAY = "12";
     private static final boolean REAL_INPUT = true;
+    public static final String RED = "red";
 
     public static void main(String[] args) throws IOException {
         long start = System.currentTimeMillis();
@@ -68,7 +69,7 @@ public class Day12 {
                     total.push(total.pop() + value);
                 }
                 case STRING -> {
-                    if ("red".equals(reader.nextString())) {
+                    if (RED.equals(reader.nextString())) {
                         red.pop();
                         red.push(true);
                     }

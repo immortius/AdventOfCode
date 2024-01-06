@@ -7,8 +7,6 @@ import java.util.List;
 
 public class Day21 {
 
-    private static final boolean REAL_INPUT = false;
-
     private static final Character REAL_BOSS = new Character(103, 9, 2);
     private static final Character EXAMPLE_BOSS = new Character(12, 7, 2);
 
@@ -48,7 +46,7 @@ public class Day21 {
         System.out.println(end - start + "ms");
     }
 
-    private void run() throws IOException {
+    private void run() {
         part1();
         part2();
     }

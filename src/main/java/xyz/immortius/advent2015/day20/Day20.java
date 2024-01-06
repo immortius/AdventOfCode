@@ -1,8 +1,13 @@
 package xyz.immortius.advent2015.day20;
 
+import com.google.common.math.LongMath;
+
 import java.io.IOException;
+import java.math.RoundingMode;
 
 public class Day20 {
+
+    private final long INPUT = 29000000L;
 
     public static void main(String[] args) throws IOException {
         long start = System.currentTimeMillis();
@@ -13,7 +18,7 @@ public class Day20 {
     }
 
     private void run() {
-        //part1();
+        part1();
         part2();
     }
 
@@ -22,22 +27,22 @@ public class Day20 {
 
         while (true) {
             long houseValue = 0;
-            long factor = house;
-            for (long i = 1; i < factor; i++) {
+
+            long s = LongMath.sqrt(house, RoundingMode.FLOOR);
+            for (long i = 1; i < s; i++) {
                 if (house % i == 0) {
-                    factor = house / i;
-                    houseValue += factor * 10;
-                    if (factor != i) {
-                        houseValue += i * 10;
+                    houseValue += i;
+                    long pair = house / i;
+                    if (pair != i) {
+                        houseValue += pair;
                     }
                 }
             }
-            if (houseValue >= 29000000L) {
+            if (houseValue * 10 >= INPUT) {
                 break;
             }
             house++;
         }
-
 
         System.out.println("Part 1: " + house);
     }
@@ -53,7 +58,7 @@ public class Day20 {
                     houseValue += factor * 11;
                 }
             }
-            if (houseValue >= 29000000L) {
+            if (houseValue >= INPUT) {
                 break;
             }
             house++;
@@ -62,17 +67,6 @@ public class Day20 {
 
         System.out.println("Part 2: " + house);
     }
-
-    public class Elf {
-        long id;
-        int deliveriesRemaining;
-
-        public Elf(long id) {
-            this.id = id;
-            deliveriesRemaining = 10;
-        }
-    }
-
 
 }
 

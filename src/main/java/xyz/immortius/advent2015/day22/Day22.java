@@ -8,8 +8,6 @@ import java.util.*;
 
 public class Day22 {
 
-    private static final boolean REAL_INPUT = false;
-
     private static final NPC REAL_BOSS = new NPC(51, 9, 0);
     private static final NPC EXAMPLE_BOSS = new NPC(13, 8, 0);
 
@@ -29,7 +27,7 @@ public class Day22 {
         System.out.println(end - start + "ms");
     }
 
-    private void run() throws IOException {
+    private void run() {
         part1();
         part2();
     }
@@ -63,8 +61,7 @@ public class Day22 {
         return result;
     }
 
-    private record NPC(int hp, int damage, int mana) {
-    }
+    private record NPC(int hp, int damage, int mana) {}
 
     private record Spell(String name, int cost, int immediateDamage, int heal, Effect effect) {}
 

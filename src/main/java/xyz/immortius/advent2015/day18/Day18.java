@@ -10,6 +10,7 @@ import java.util.List;
 
 public class Day18 {
 
+    private static boolean DEBUG = false;
     private static final String YEAR = "2015";
     private static final String DAY = "18";
     private static final boolean REAL_INPUT = true;
@@ -47,10 +48,10 @@ public class Day18 {
     private void part1(Board board) {
         for (int i = 0; i < 100; i++) {
             board = step(board);
-            //System.out.println("Step " + i);
-            //board.print();
         }
-        board.print();
+        if (DEBUG) {
+            board.print();
+        }
 
         int count = 0;
         for (int i = 0; i < board.board.length; i++) {
@@ -74,7 +75,9 @@ public class Day18 {
             board.set(board.sizeX - 1, 0,true);
             board.set(board.sizeX - 1, board.sizeY - 1, true);
         }
-        board.print();
+        if (DEBUG) {
+            board.print();
+        }
 
         int count = 0;
         for (int i = 0; i < board.board.length; i++) {

@@ -4,7 +4,6 @@ import java.io.IOException;
 
 public class Day25 {
 
-
     public static void main(String[] args) throws IOException {
         long start = System.currentTimeMillis();
         new Day25().run();
@@ -13,13 +12,12 @@ public class Day25 {
         System.out.println(end - start + "ms");
     }
 
-    private void run() throws IOException {
+    private void run() {
        part1();
     }
 
-
     private void part1() {
-        //row 2978, column 3083
+        //Input: row 2978, column 3083
         long value = 20151125;
         int row = 1;
         int column = 1;
@@ -32,7 +30,7 @@ public class Day25 {
                 column++;
             }
             value = (value * 252533L) % 33554393;
-            if (row <7 && column < 7) {
+            if (row < 7 && column < 7) {
                 System.out.println(column + "," + row + ": " + value);
             }
         }

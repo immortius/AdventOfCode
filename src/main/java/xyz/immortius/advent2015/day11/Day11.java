@@ -4,10 +4,6 @@ import java.io.IOException;
 
 public class Day11 {
 
-    private static final String YEAR = "2015";
-    private static final String DAY = "11";
-    private static final boolean REAL_INPUT = false;
-
     public static void main(String[] args) throws IOException {
         long start = System.currentTimeMillis();
         new Day11().run();
@@ -17,18 +13,17 @@ public class Day11 {
     }
 
     private void run() {
-        part1();
-        part2();
+        String nextPassword = getNextPassword("vzbxkghb");
+        System.out.println("Part 1: " + nextPassword);
+        System.out.println("Part 2: " + getNextPassword(nextPassword));
     }
 
-    private void part1() {
-        String initialPassword = "vzbxkghb";
-        String password = incrementPassword(initialPassword);
+    private String getNextPassword(String currentPassword) {
+        String password = incrementPassword(currentPassword);
         while (!validate(password)) {
             password = incrementPassword(password);
         }
-
-        System.out.println("Part 1: " + password);
+        return password;
     }
 
     private String incrementPassword(String password) {
@@ -71,18 +66,5 @@ public class Day11 {
         }
         return straight;
     }
-
-    private void part2() {
-        String initialPassword = "vzbxxyzz";
-        String password = incrementPassword(initialPassword);
-        while (!validate(password)) {
-            password = incrementPassword(password);
-        }
-
-        System.out.println("Part 2: " + password);
-    }
-
-
-
 }
 
