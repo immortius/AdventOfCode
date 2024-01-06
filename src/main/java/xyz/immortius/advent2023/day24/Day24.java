@@ -1,22 +1,19 @@
 package xyz.immortius.advent2023.day24;
 
 import com.google.common.io.CharStreams;
-import com.google.common.math.BigIntegerMath;
 import com.google.common.math.LongMath;
-import org.joml.Vector2d;
 import org.joml.Vector3d;
-import org.joml.Vector3dc;
-import xyz.immortius.util.*;
+import xyz.immortius.util.Vector2lc;
+import xyz.immortius.util.Vector3l;
+import xyz.immortius.util.Vector3lc;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.function.Function;
 
 public class Day24 {
 

@@ -1,15 +1,15 @@
 package xyz.immortius.advent2017.day14;
 
-import com.google.common.io.CharStreams;
 import org.joml.Vector2i;
 import org.joml.Vector2ic;
 import xyz.immortius.advent2017.day10.Day10;
 import xyz.immortius.util.Direction;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Day14 {
 

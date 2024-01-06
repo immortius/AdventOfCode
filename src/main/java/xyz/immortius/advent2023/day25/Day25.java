@@ -2,8 +2,6 @@ package xyz.immortius.advent2023.day25;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
-import com.google.common.collect.SetMultimap;
-import com.google.common.collect.Sets;
 import com.google.common.io.CharStreams;
 import org.jetbrains.annotations.Nullable;
 
@@ -11,7 +9,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Day25 {
 

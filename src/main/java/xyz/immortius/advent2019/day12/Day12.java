@@ -3,12 +3,13 @@ package xyz.immortius.advent2019.day12;
 import com.google.common.io.CharStreams;
 import org.jetbrains.annotations.NotNull;
 import org.joml.Vector3i;
-import org.joml.Vector3ic;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Day12 {
 

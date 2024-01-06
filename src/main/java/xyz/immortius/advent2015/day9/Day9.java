@@ -1,12 +1,16 @@
 package xyz.immortius.advent2015.day9;
 
-import com.google.common.collect.*;
+import com.google.common.collect.Collections2;
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
 import com.google.common.io.CharStreams;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 public class Day9 {
 
@@ -25,8 +29,7 @@ public class Day9 {
         }
 
         Table<String, String, Integer> connections = parse(lines);
-        part1(connections);
-        part2(connections);
+        process(connections);
     }
 
     private Table<String, String, Integer> parse(List<String> lines) {
@@ -42,26 +45,10 @@ public class Day9 {
         return connections;
     }
 
-    private void part1(Table<String, String, Integer> connections) {
+    private void process(Table<String, String, Integer> connections) {
         List<String> places = new ArrayList<>(connections.rowKeySet());
 
         int minDistance = Integer.MAX_VALUE;
-        Collection<List<String>> permutations = Collections2.permutations(places);
-        for (List<String> permutation : permutations) {
-            int distance = 0;
-            for (int i = 0; i < permutation.size() - 1; i++) {
-                distance += connections.get(permutation.get(i), permutation.get(i + 1));
-            }
-            minDistance = Math.min(distance, minDistance);
-        }
-
-        System.out.println("Part 1: " + minDistance);
-    }
-
-
-    private void part2(Table<String, String, Integer> connections) {
-        List<String> places = new ArrayList<>(connections.rowKeySet());
-
         int maxDistance = Integer.MIN_VALUE;
         Collection<List<String>> permutations = Collections2.permutations(places);
         for (List<String> permutation : permutations) {
@@ -69,15 +56,12 @@ public class Day9 {
             for (int i = 0; i < permutation.size() - 1; i++) {
                 distance += connections.get(permutation.get(i), permutation.get(i + 1));
             }
+            minDistance = Math.min(distance, minDistance);
             maxDistance = Math.max(distance, maxDistance);
         }
 
-        System.out.println("Part 1: " + maxDistance);
+        System.out.println("Part 1: " + minDistance);
+        System.out.println("Part 2: " + maxDistance);
     }
-
-
-
-
-
 }
 

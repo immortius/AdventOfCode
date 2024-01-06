@@ -6,7 +6,7 @@ import xyz.immortius.util.CircularBuffer;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.List;
 
 public class Day5 {
     public static void main(String[] args) throws IOException {
@@ -19,20 +19,29 @@ public class Day5 {
             lines = CharStreams.readLines(reader);
         }
 
-        process(lines);
-        process(Arrays.asList("abab", "aaa", "abdcdab"));
+        System.out.println("Part 1: " + part1(lines));
+        System.out.println("Part 2: " + part2(lines));
+
     }
 
-    private void process(List<String> input) {
+    private int part1(List<String> input) {
+        int nice = 0;
+        for (String name : input) {
+            if (noBannedParts(name) && hasDouble(name) && correctVowels(name)) {
+                nice++;
+            }
+        }
+        return nice;
+    }
 
+    private int part2(List<String> input) {
         int nice = 0;
         for (String name : input) {
             if (hasReveb(name) && hasDuplicatePair(name)) {
                 nice++;
             }
         }
-        System.out.println(nice);
-
+        return nice;
     }
 
     private boolean hasReveb(String name) {

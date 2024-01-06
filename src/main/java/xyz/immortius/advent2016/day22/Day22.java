@@ -6,7 +6,6 @@ import com.google.common.io.CharStreams;
 import org.jetbrains.annotations.NotNull;
 import org.joml.Vector2i;
 import org.joml.Vector2ic;
-import xyz.immortius.util.Direction;
 
 import java.io.BufferedReader;
 import java.io.IOException;

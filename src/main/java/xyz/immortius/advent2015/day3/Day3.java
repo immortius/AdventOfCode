@@ -7,10 +7,12 @@ import org.joml.Vector2ic;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class Day3 {
-    private final Set<Vector2ic> visited = new HashSet<>();
 
     public static void main(String[] args) throws IOException {
         new Day3().run();
@@ -22,31 +24,45 @@ public class Day3 {
             lines = CharStreams.readLines(reader);
         }
 
-        process(lines.get(0));
+        part1(lines.get(0));
+        part2(lines.get(0));
     }
 
-    private void process(String input) {
+    private void part1(String input) {
+        Vector2i santaPos = new Vector2i();
+        Set<Vector2ic> visited = new HashSet<>();
+        visited.add(new Vector2i(santaPos));
+        for (char c : input.toCharArray()) {
+            switch (c) {
+                case '>' -> santaPos.add(1, 0);
+                case '<' -> santaPos.add(-1, 0);
+                case '^' -> santaPos.add(0, 1);
+                case 'v' -> santaPos.add(0, -1);
+            }
+            visited.add(new Vector2i(santaPos));
+        }
+        System.out.println("Part 1: " + visited.size());
+    }
+
+    private void part2(String input) {
         List<Vector2i> santas = new ArrayList<>();
         santas.add(new Vector2i(0,0));
         santas.add(new Vector2i(0,0));
-        visit(new Vector2i(0,0));
+        Set<Vector2ic> visited = new HashSet<>();
+        visited.add(new Vector2i(0,0));
         int turn = 0;
         for (char c : input.toCharArray()) {
+            Vector2i santaPos = santas.get(turn);
             switch (c) {
-                case '>' -> visit(santas.get(turn).add(1, 0));
-                case '<' -> visit(santas.get(turn).add(-1, 0));
-                case '^' -> visit(santas.get(turn).add(0, 1));
-                case 'v' -> visit(santas.get(turn).add(0, -1));
+                case '>' -> santaPos.add(1, 0);
+                case '<' -> santaPos.add(-1, 0);
+                case '^' -> santaPos.add(0, 1);
+                case 'v' -> santaPos.add(0, -1);
             }
+            visited.add(new Vector2i(santaPos));
             turn = (turn + 1) % santas.size();
         }
-        System.out.println(visited.size());
-
+        System.out.println("Part 2: " + visited.size());
     }
-
-    private void visit(Vector2ic location) {
-        visited.add(new Vector2i(location));
-    }
-
 }
 

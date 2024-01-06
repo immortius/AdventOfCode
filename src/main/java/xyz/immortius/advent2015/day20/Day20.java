@@ -1,10 +1,6 @@
 package xyz.immortius.advent2015.day20;
 
-import com.google.common.collect.Sets;
-import com.google.common.math.IntMath;
-
 import java.io.IOException;
-import java.util.*;
 
 public class Day20 {
 

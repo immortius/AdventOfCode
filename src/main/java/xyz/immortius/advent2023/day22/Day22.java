@@ -1,7 +1,6 @@
 package xyz.immortius.advent2023.day22;
 
 import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Multimap;
 import com.google.common.collect.SetMultimap;
 import com.google.common.io.CharStreams;
 import org.joml.Vector3i;

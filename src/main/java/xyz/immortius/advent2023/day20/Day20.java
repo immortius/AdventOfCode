@@ -1,7 +1,6 @@
 package xyz.immortius.advent2023.day20;
 
 import com.google.common.io.CharStreams;
-import com.google.common.math.LongMath;
 import xyz.immortius.util.MathUtil;
 
 import java.io.BufferedReader;

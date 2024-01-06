@@ -1,7 +1,5 @@
 package xyz.immortius.util;
 
-import xyz.immortius.advent2016.day20.Day20;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;

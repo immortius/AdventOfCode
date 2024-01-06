@@ -1,13 +1,15 @@
 package xyz.immortius.advent2019.day21;
 
 import com.google.common.io.CharStreams;
-import xyz.immortius.advent2019.day2.*;
+import xyz.immortius.advent2019.day2.IntCodeComputer;
+import xyz.immortius.advent2019.day2.IntCodeHelper;
+import xyz.immortius.advent2019.day2.IntCodeInputStream;
+import xyz.immortius.advent2019.day2.IntCodeOutputStream;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayDeque;
-import java.util.Arrays;
 import java.util.Deque;
 import java.util.List;
 

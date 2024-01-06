@@ -1,7 +1,6 @@
 package xyz.immortius.advent2016.day8;
 
 import com.google.common.io.CharStreams;
-import xyz.immortius.advent2022.day15.GridMap;
 
 import java.io.BufferedReader;
 import java.io.IOException;

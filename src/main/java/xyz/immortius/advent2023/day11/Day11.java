@@ -3,7 +3,6 @@ package xyz.immortius.advent2023.day11;
 import com.google.common.io.CharStreams;
 import org.jetbrains.annotations.NotNull;
 import org.joml.Vector2i;
-import org.joml.Vector2ic;
 import xyz.immortius.util.Vector2l;
 import xyz.immortius.util.Vector2lc;
 

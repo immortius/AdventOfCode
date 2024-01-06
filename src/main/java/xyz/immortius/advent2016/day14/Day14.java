@@ -1,18 +1,12 @@
 package xyz.immortius.advent2016.day14;
 
-import com.google.common.collect.HashMultiset;
-import com.google.common.collect.Multiset;
 import com.google.common.hash.HashCode;
-import com.google.common.io.CharStreams;
 import xyz.immortius.util.CircularBuffer;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.List;
 
 public class Day14 {
 

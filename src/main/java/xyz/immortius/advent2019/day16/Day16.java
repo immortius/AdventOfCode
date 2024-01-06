@@ -1,12 +1,6 @@
 package xyz.immortius.advent2019.day16;
 
-import com.google.common.collect.HashBasedTable;
-import com.google.common.collect.Table;
-import org.jetbrains.annotations.NotNull;
-
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Day16 {
 

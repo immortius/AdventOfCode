@@ -1,7 +1,6 @@
 package xyz.immortius;
 
 import com.google.common.io.CharStreams;
-import xyz.immortius.advent2015.day10.Day10;
 
 import java.io.BufferedReader;
 import java.io.IOException;

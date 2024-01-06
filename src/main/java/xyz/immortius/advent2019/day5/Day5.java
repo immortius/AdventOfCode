@@ -6,7 +6,6 @@ import xyz.immortius.advent2019.day2.IntCodeComputer;
 import xyz.immortius.advent2019.day2.IntCodeHelper;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 

@@ -18,10 +18,23 @@ public class Day1 {
             lines = CharStreams.readLines(reader);
         }
 
-        process(lines.get(0));
+        part1(lines.get(0));
+        part2(lines.get(0));
     }
 
-    private void process(String input) {
+
+    private void part1(String input) {
+        int floor = 0;
+        for (char c : input.toCharArray()) {
+            switch (c) {
+                case '(' -> floor++;
+                case ')' -> floor--;
+            }
+        }
+        System.out.println("Part 1: " + floor);
+    }
+
+    private void part2(String input) {
         int floor = 0;
         for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
@@ -30,11 +43,10 @@ public class Day1 {
                 case ')' -> floor--;
             }
             if (floor == -1) {
-                System.out.println(i + 1);
+                System.out.println("Part 2: " + (i + 1));
                 break;
             }
         }
-
     }
 
 }

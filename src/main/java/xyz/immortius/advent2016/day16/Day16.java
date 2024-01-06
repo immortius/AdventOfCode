@@ -1,7 +1,6 @@
 package xyz.immortius.advent2016.day16;
 
 import java.io.IOException;
-import java.util.BitSet;
 
 public class Day16 {
 

@@ -8,6 +8,7 @@ import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -26,11 +27,13 @@ public class Day6 {
             lines = CharStreams.readLines(reader);
         }
 
-        process(lines);
-        process2(lines);
+        Files.createDirectories(Paths.get("out"));
+
+        part1(lines);
+        part2(lines);
     }
 
-    private void process2(List<String> lines) throws IOException {
+    private void part2(List<String> lines) throws IOException {
         int[][] state = new int[1000][1000];
 
         for (String line : lines) {
@@ -53,8 +56,6 @@ public class Day6 {
             } else {
                 System.out.println("No match: " + line);
             }
-
-
         }
 
         int countLit = 0;
@@ -63,7 +64,7 @@ public class Day6 {
                 countLit += value;
             }
         }
-        System.out.println(countLit);
+        System.out.println("Part 2: " + countLit);
 
         BufferedImage map = new BufferedImage(1000, 1000, BufferedImage.TYPE_INT_RGB);
         Graphics2D graphics = map.createGraphics();
@@ -77,10 +78,10 @@ public class Day6 {
             }
         }
 
-        ImageIO.write(map, "png", Paths.get("2015day6-2.png").toFile());
+        ImageIO.write(map, "png", Paths.get("out").resolve("2015day6-2.png").toFile());
     }
 
-    private void process(List<String> input) throws IOException {
+    private void part1(List<String> input) throws IOException {
         boolean[][] state = new boolean[1000][1000];
 
         for (String line : input) {
@@ -103,8 +104,6 @@ public class Day6 {
             } else {
                 System.out.println("No match: " + line);
             }
-
-
         }
 
         int countLit = 0;
@@ -113,7 +112,7 @@ public class Day6 {
                 if (value) countLit++;
             }
         }
-        System.out.println(countLit);
+        System.out.println("Part 1: " + countLit);
 
         BufferedImage map = new BufferedImage(1000, 1000, BufferedImage.TYPE_INT_RGB);
         Graphics2D graphics = map.createGraphics();
@@ -128,9 +127,7 @@ public class Day6 {
             }
         }
 
-        ImageIO.write(map, "png", Paths.get("2015day6-1.png").toFile());
-
-
+        ImageIO.write(map, "png", Paths.get("out").resolve("2015day6-1.png").toFile());
     }
 
 }

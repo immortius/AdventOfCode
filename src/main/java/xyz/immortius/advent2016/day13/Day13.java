@@ -1,16 +1,14 @@
 package xyz.immortius.advent2016.day13;
 
-import com.google.common.io.CharStreams;
 import org.jetbrains.annotations.NotNull;
 import org.joml.Vector2i;
 import org.joml.Vector2ic;
 import xyz.immortius.advent2022.day12.AStar;
 import xyz.immortius.util.Direction;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Day13 {
 

@@ -1,15 +1,16 @@
 package xyz.immortius.advent2018.day23;
 
 import com.google.common.io.CharStreams;
-import org.joml.Vector3i;
-import org.joml.Vector3ic;
 import xyz.immortius.util.Vector3l;
 import xyz.immortius.util.Vector3lc;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
 public class Day23 {
 

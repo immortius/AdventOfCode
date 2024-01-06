@@ -1,8 +1,8 @@
 package xyz.immortius.advent2018.day21;
 
 import com.google.common.io.CharStreams;
-import xyz.immortius.advent2018.day19.Instruction;
 import xyz.immortius.advent2018.day19.Computer;
+import xyz.immortius.advent2018.day19.Instruction;
 import xyz.immortius.advent2018.day19.OpCodes;
 
 import java.io.BufferedReader;

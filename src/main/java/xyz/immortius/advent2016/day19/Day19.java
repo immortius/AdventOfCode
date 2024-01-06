@@ -1,12 +1,7 @@
 package xyz.immortius.advent2016.day19;
 
-import com.google.common.io.CharStreams;
-
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Day19 {

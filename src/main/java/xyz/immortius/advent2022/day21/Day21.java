@@ -1,9 +1,7 @@
 package xyz.immortius.advent2022.day21;
 
 import com.google.common.collect.ArrayListMultimap;
-import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ListMultimap;
-import com.google.common.collect.SetMultimap;
 import com.google.common.io.CharStreams;
 
 import java.io.BufferedReader;
@@ -12,7 +10,6 @@ import java.io.InputStreamReader;
 import java.math.BigInteger;
 import java.util.*;
 import java.util.function.BiFunction;
-import java.util.stream.Collectors;
 
 public class Day21 {
 

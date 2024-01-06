@@ -2,7 +2,6 @@ package xyz.immortius.advent2018.day25;
 
 import com.google.common.io.CharStreams;
 import org.joml.Vector4i;
-import org.joml.Vector4ic;
 
 import java.io.BufferedReader;
 import java.io.IOException;

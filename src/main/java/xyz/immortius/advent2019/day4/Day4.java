@@ -1,14 +1,6 @@
 package xyz.immortius.advent2019.day4;
 
-import com.google.common.io.CharStreams;
-import org.checkerframework.checker.units.qual.A;
-
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 public class Day4 {
 

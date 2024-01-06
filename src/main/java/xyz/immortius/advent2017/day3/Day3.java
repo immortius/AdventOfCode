@@ -1,13 +1,10 @@
 package xyz.immortius.advent2017.day3;
 
-import com.google.common.io.CharStreams;
 import org.joml.Vector2i;
 import org.joml.Vector2ic;
 import xyz.immortius.advent2022.day15.SpiralIterator;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.*;
 
 public class Day3 {

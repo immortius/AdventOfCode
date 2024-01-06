@@ -1,8 +1,5 @@
 package xyz.immortius.advent2023.day15;
 
-import com.google.common.collect.ArrayListMultimap;
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Multimap;
 import com.google.common.io.CharStreams;
 
 import java.io.BufferedReader;

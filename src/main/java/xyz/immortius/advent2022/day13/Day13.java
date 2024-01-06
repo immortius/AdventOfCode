@@ -2,10 +2,6 @@ package xyz.immortius.advent2022.day13;
 
 import com.google.common.base.Joiner;
 import com.google.common.io.CharStreams;
-import org.checkerframework.checker.units.qual.A;
-import org.joml.Vector2i;
-import org.joml.Vector2ic;
-import xyz.immortius.util.Direction;
 
 import java.io.BufferedReader;
 import java.io.IOException;

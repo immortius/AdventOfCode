@@ -1,10 +1,7 @@
 package xyz.immortius.advent2023.day19;
 
 import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Multimap;
 import com.google.common.io.CharStreams;
-import org.joml.Vector2i;
-import org.joml.Vector2ic;
 import org.joml.Vector4i;
 import org.joml.Vector4ic;
 

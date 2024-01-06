@@ -3,8 +3,6 @@ package xyz.immortius.advent2022.day22;
 import org.joml.Vector2i;
 import org.joml.Vector2ic;
 
-import java.util.Arrays;
-
 public class WarpMap {
     private final int dimX;
     private final int dimY;

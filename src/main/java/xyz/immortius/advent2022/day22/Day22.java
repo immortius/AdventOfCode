@@ -4,12 +4,13 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.io.CharStreams;
 import org.joml.Vector2i;
 import org.joml.Vector2ic;
-import xyz.immortius.advent2022.day15.GridMap;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class Day22 {
 

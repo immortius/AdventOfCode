@@ -3,10 +3,6 @@ package xyz.immortius.advent2023.day21;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.io.CharStreams;
 import org.jetbrains.annotations.NotNull;
-import org.joml.Vector2i;
-import org.joml.Vector2ic;
-import xyz.immortius.advent2023.day9.Day9;
-import xyz.immortius.util.Direction;
 import xyz.immortius.util.Vector2l;
 import xyz.immortius.util.Vector2lc;
 

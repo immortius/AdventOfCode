@@ -1,10 +1,6 @@
 package xyz.immortius.advent2018.day14;
 
-import com.google.common.io.CharStreams;
-
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 

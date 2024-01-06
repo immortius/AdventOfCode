@@ -1,8 +1,6 @@
 package xyz.immortius.advent2016.day23;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.io.CharStreams;
-import xyz.immortius.advent2016.day12.Day12;
 
 import java.io.BufferedReader;
 import java.io.IOException;

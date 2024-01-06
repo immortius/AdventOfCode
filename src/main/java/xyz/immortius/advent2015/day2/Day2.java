@@ -24,7 +24,6 @@ public class Day2 {
     }
 
     private void process(List<String> input) {
-
         List<int[]> dimensions = new ArrayList<>();
         for (String line : input) {
             String[] sides = line.split("x");

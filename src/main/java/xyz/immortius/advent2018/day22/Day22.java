@@ -3,7 +3,6 @@ package xyz.immortius.advent2018.day22;
 import com.google.common.base.Objects;
 import org.joml.Vector2i;
 import org.joml.Vector2ic;
-import xyz.immortius.advent2018.day20.Day20;
 import xyz.immortius.util.Direction;
 
 import java.io.IOException;

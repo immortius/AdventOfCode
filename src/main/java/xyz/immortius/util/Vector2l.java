@@ -1,10 +1,9 @@
 package xyz.immortius.util;
 
 import com.google.common.base.Objects;
+import org.joml.Options;
 import org.joml.Runtime;
-import org.joml.*;
 
-import java.lang.Math;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 

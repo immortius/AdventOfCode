@@ -1,7 +1,6 @@
 package xyz.immortius.advent2016.day11;
 
 import com.google.common.base.Objects;
-import com.google.common.collect.Comparators;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.CharStreams;
 
@@ -10,7 +9,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Day11 {
 

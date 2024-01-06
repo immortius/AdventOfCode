@@ -1,15 +1,8 @@
 package xyz.immortius.advent2015.day10;
 
-import com.google.common.io.CharStreams;
-import xyz.immortius.advent2022.day25.Day25;
-
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.List;
 
 public class Day10 {
-
 
     public static void main(String[] args) throws IOException {
         long start = System.currentTimeMillis();
@@ -19,17 +12,20 @@ public class Day10 {
         System.out.println(end - start + "ms");
     }
 
-    private void run() throws IOException {
-        part1();
-        part2();
+    private void run() {
+        process("3113322113");
     }
 
-    private void part1() {
-        String value = "3113322113";
-        for (int i = 0; i < 50; i++) {
+    private void process(String input) {
+        String value = input;
+        for (int i = 0; i < 40; i++) {
             value = lookAndSay(value);
         }
         System.out.println("Part 1: " + value.length());
+        for (int i = 0; i < 10; i++) {
+            value = lookAndSay(value);
+        }
+        System.out.println("Part 2: " + value.length());
     }
 
     private String lookAndSay(String value) {
@@ -50,12 +46,6 @@ public class Day10 {
         result.append(c);
         return result.toString();
     }
-
-    private void part2() {
-
-    }
-
-
 
 }
 

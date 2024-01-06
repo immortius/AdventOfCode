@@ -4,11 +4,8 @@ import org.joml.Math;
 import xyz.immortius.util.MathUtil;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
-import static javax.swing.UIManager.get;
 
 public class Day6 {
 

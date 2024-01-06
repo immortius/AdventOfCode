@@ -3,7 +3,6 @@ package xyz.immortius.advent2016.day1;
 import com.google.common.collect.ImmutableMap;
 import org.joml.Vector2i;
 import org.joml.Vector2ic;
-import xyz.immortius.util.Direction;
 
 import java.util.Map;
 

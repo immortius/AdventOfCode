@@ -1,7 +1,6 @@
 package xyz.immortius.advent2023.day2;
 
 import com.google.common.io.CharStreams;
-import org.joml.Vector3i;
 
 import java.io.BufferedReader;
 import java.io.IOException;

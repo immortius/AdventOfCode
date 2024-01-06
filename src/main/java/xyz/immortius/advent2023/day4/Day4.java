@@ -2,8 +2,6 @@ package xyz.immortius.advent2023.day4;
 
 import com.google.common.collect.Sets;
 import com.google.common.io.CharStreams;
-import com.google.common.math.IntMath;
-import org.joml.Math;
 
 import java.io.BufferedReader;
 import java.io.IOException;
